@@ -1,7 +1,7 @@
 <h1>Log in</h1>
 
 <% if flash[:alert] %>
-   <p class="flash-error"><%= flash[:alert] %></p>
+   <p class="alert-error"><%= flash[:alert] %></p>
 <% end %>
 
 <%= form_tag sessions_path do %>
@@ -13,5 +13,5 @@
     <%= label_tag :password %>
     <%= password_field_tag :password %>
   </div>
-  <div class="actions"><%= submit_tag "Log in" %></div>
+  <button class="btn" type="submit">Log in</button>
 <% end %>
