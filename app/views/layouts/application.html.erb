@@ -10,13 +10,14 @@
 <body>
   <div class="navbar">
     <div class="navbar-inner">
-      <a class="brand" href="#">Clikd</a>
+      <a class="brand" href="/">Clikd</a>
       <ul class="nav">
-        <li><a href="#">Home</a></li>
+        <li><a href="#">Browse</a></li>
       </ul>
 
       <ul class="nav pull-right">
         <% if logged_in? %>
+          <li><%= link_to current_user.email, "#" %></li>
           <li><%= link_to "Log Out", '/logout' %></li>
         <% else %>
           <li><%= link_to "Log In", '/login' %></li>
