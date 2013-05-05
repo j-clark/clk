@@ -1,9 +1,9 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Clk</title>
+  <title>Clikd</title>
   <%= stylesheet_link_tag    "application", :media => "all" %>
-  <%= stylesheet_link_tag    "bootstrap", :media => "all" %>
+  <%= stylesheet_link_tag    "bootstrap",   :media => "all" %>
   <%= javascript_include_tag "application" %>
   <%= csrf_meta_tags %>
 </head>
@@ -17,7 +17,7 @@
 
       <ul class="nav pull-right">
         <% if logged_in? %>
-          <li><%= link_to current_user.email, "#" %></li>
+          <li><%= link_to current_user.username, "#" %></li>
           <li><%= link_to "Log Out", '/logout' %></li>
         <% else %>
           <li><%= link_to "Log In", '/login' %></li>

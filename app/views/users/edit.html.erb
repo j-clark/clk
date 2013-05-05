@@ -1,0 +1,5 @@
+<% if @user.nil? %>
+  <p>Whoops, you don't have permission to do that.</p>
+<% else %>
+  edit <%= @user.username %>
+<% end %>

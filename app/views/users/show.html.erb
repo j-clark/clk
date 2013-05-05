@@ -1,0 +1,7 @@
+<h1>
+  <%= @user_to_show.username %>
+</h1>
+
+(<%= @user_to_show.email %>)
+<br><br>
+Member since <%= @user_to_show.created_at.strftime("%b %d, %Y") %>
