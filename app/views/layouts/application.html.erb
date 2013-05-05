@@ -3,12 +3,31 @@
 <head>
   <title>Clk</title>
   <%= stylesheet_link_tag    "application", :media => "all" %>
+  <%= stylesheet_link_tag    "bootstrap", :media => "all" %>
   <%= javascript_include_tag "application" %>
   <%= csrf_meta_tags %>
 </head>
 <body>
+  <div class="navbar">
+    <div class="navbar-inner">
+      <a class="brand" href="#">Clikd</a>
+      <ul class="nav">
+        <li><a href="#">Home</a></li>
+      </ul>
 
-<%= yield %>
+      <ul class="nav pull-right">
+        <% if logged_in? %>
+          <li><%= link_to "Log Out", '/logout' %></li>
+        <% else %>
+          <li><%= link_to "Log In", '/login' %></li>
+          <li><%= link_to "Sign Up", controller: :users, action: :new %></li>
+        <% end %>
+      </ul>
+    </div>
+  </div>
+  <div class="content">
+    <%= yield %>
+  </div>
 
 </body>
 </html>
