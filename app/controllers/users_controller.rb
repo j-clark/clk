@@ -1,5 +1,10 @@
 class UsersController < ApplicationController
 
+  def update
+    current_user.update_attributes(params[:user])
+    redirect_to user_url(current_user.username)
+  end
+
   def edit
     @user = current_user if current_user.username == params[:id]
   end
@@ -15,7 +20,7 @@ class UsersController < ApplicationController
   def create
     @user = User.new(params[:user])
     if @user.save
-      cookies[:auth_token] = @user.auth_tokenf
+      cookies[:auth_token] = @user.auth_token
       redirect_to user_url(@user.username), :notice => "Signed up!"
     else
       render "new"

@@ -1,6 +1,6 @@
 <% if current_user.username == @user_to_show.username %>
   <button class="btn pull-right">
-    <%= link_to "Edit my profile", edit_user_path(current_user.username) %>
+    <%= link_to "Change my password", edit_user_path(current_user.username) %>
   </button>
 <% end %>
 
