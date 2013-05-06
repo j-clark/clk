@@ -2,12 +2,12 @@
   <div class="row">
     <div class="span8">
       <span><%= first.title %></span><br>
-      <span>by: <%= link_to first.user.username, users_url(first.user.id) %></span>
+      <span>by: <%= link_to first.user.username, user_path(first.user.username) %></span>
       <p><%= first.body %></p>
     </div>
     <div class="span8">
       <span><%= second.title %></span><br>
-      <span>by: <%= link_to second.user.username, users_url(second.user.id) %></span>
+      <span>by: <%= link_to second.user.username, user_path(second.user.username) %></span>
       <p><%= second.body %></p>
     </div>
   </div>

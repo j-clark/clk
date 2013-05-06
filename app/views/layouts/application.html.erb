@@ -13,6 +13,9 @@
       <a class="brand" href="/">Clikd</a>
       <ul class="nav">
         <li><%= link_to "Browse", posts_url %></li>
+        <% if logged_in? %>
+          <li><%= link_to "Create a listing", new_post_url %></li>
+        <% end %>
       </ul>
 
       <ul class="nav pull-right">

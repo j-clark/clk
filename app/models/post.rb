@@ -3,4 +3,5 @@ class Post < ActiveRecord::Base
   attr_accessible :body, :title, :user
   validates_presence_of :title
   validates_presence_of :body
+  validates_presence_of :user_id
 end
